@@ -1,4 +1,4 @@
-package com.base.base_source.ui.calculator
+package com.base.base_source.ui.weather
 
 
 import android.view.LayoutInflater

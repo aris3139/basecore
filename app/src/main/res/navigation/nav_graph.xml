@@ -32,6 +32,6 @@
         android:label="UserInformationFragment"></fragment>
     <fragment
         android:id="@+id/calculatorFragment"
-        android:name="com.base.base_source.ui.calculator.WeatherFragment"
+        android:name="com.base.base_source.ui.weather.WeatherFragment"
         android:label="CalculatorFragment" />
 </navigation>
