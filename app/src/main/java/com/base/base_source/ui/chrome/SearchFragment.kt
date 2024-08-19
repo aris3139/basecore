@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.base.base_source.databinding.FragmentChromeSearchBinding
+import com.base.base_source.extentions.showKeyboard
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -39,6 +40,9 @@ class SearchFragment : Fragment() {
             SearchTrendData("đậu mùa"),
             SearchTrendData("ngu đần"),
         )
+
+        binding.edtSearch2.requestFocus()
+        context?.let { showKeyboard(it, binding.edtSearch2) }
         val adapter = ChromeAdapter(trendList)
         binding.rcv.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
