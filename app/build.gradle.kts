@@ -92,4 +92,7 @@ dependencies {
 
     // data store
     implementation(libs.androidx.datastore.preferences)
+
+    // Chrome
+    implementation(libs.swiperefreshlayout)
 }

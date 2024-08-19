@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
-
+<!--        SearchBar-->
         <View
             android:id="@+id/header_background"
             android:layout_width="match_parent"
@@ -90,6 +90,8 @@
             app:layout_constraintBottom_toBottomOf="@+id/edt_search"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/edt_search" />
+
+        <!--        SearchBar-->
 
         <!-- ====NavBar of Google page=== -->
         <ImageView
