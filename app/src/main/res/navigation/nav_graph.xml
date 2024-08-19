@@ -41,9 +41,16 @@
         <action
             android:id="@+id/action_chromeFragment_to_searchFragment"
             app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_chromeFragment_to_inputAdataFragment"
+            app:destination="@id/inputAdataFragment" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.base.base_source.ui.chrome.SearchFragment"
         android:label="SearchFragment" />
+    <fragment
+        android:id="@+id/inputAdataFragment"
+        android:name="com.base.base_source.ui.chrome.InputAdataFragment"
+        android:label="InputAdataFragment" />
 </navigation>

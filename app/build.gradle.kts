@@ -92,4 +92,6 @@ dependencies {
 
     // data store
     implementation(libs.androidx.datastore.preferences)
+    implementation("com.mikhaellopez:circularimageview:4.3.1")
+
 }

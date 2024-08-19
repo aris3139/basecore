@@ -39,8 +39,8 @@
             android:background="@drawable/circle_url_background"
             android:drawableStart="@drawable/page_info_24px"
             android:drawablePadding="10dp"
-            android:text="google.com.vn/?hl=vn"
             android:singleLine="true"
+            android:text="google.com.vn/?hl=vn"
             android:paddingHorizontal="10dp"
             android:paddingVertical="10dp"
             android:textColor="?attr/colorOnSurface"
@@ -152,14 +152,13 @@
 
         <!-- ====NavBar of Google page=== -->
 
-        <Button
+        <com.mikhaellopez.circularimageview.CircularImageView
             android:id="@+id/iconButton"
-            style="?attr/materialIconButtonFilledStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="Avatar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/app_ic"
+            android:scaleType="centerCrop"
             android:layout_marginRight="15dp"
-            app:icon="@drawable/baseline_android_24"
             app:layout_constraintBottom_toBottomOf="@+id/g_item_text_2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/g_item_text_2" />
