@@ -13,13 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
+
         <View
             android:id="@+id/header_background"
             android:layout_width="match_parent"
             android:layout_height="63dp"
-            android:layout_marginTop="10dp"
             android:background="#faf8ff"
-            app:layout_constraintEnd_toBottomOf="parent" />
+            app:layout_constraintTop_toTopOf="parent" />
         <ImageView
             android:id="@+id/iv_home"
             android:layout_width="40dp"
@@ -174,7 +174,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/g_menu" />
 
-        <EditText
+        <TextView
             android:id="@+id/edt_search_2"
             android:layout_width="match_parent"
             android:layout_height="40dp"

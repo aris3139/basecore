@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.base.base_source.R
 import com.base.base_source.databinding.FragmentChromeBinding
@@ -43,6 +44,14 @@ class ChromeFragment : Fragment() {
         binding.rcv.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         binding.rcv.adapter = adapter
+
+
+        // navigate
+
+        binding.edtSearch2.setOnClickListener {
+            findNavController().navigate(R.id.action_chromeFragment_to_searchFragment)
+        }
+
     }
 
     override fun onDestroyView() {

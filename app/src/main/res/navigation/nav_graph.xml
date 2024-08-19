@@ -37,5 +37,13 @@
     <fragment
         android:id="@+id/chromeFragment"
         android:name="com.base.base_source.ui.chrome.ChromeFragment"
-        android:label="ChromeFragment" />
+        android:label="ChromeFragment" >
+        <action
+            android:id="@+id/action_chromeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.base.base_source.ui.chrome.SearchFragment"
+        android:label="SearchFragment" />
 </navigation>

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.base.base_source.databinding.FragmentChromeSearchBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -42,6 +43,11 @@ class SearchFragment : Fragment() {
         binding.rcv.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         binding.rcv.adapter = adapter
+
+        // navigate
+        binding.shapeableImageView2.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 
     override fun onDestroyView() {
