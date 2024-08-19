@@ -95,4 +95,6 @@ dependencies {
 
     // Chrome
     implementation(libs.swiperefreshlayout)
+    implementation("com.mikhaellopez:circularimageview:4.3.1")
+
 }
