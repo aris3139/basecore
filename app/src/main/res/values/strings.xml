@@ -16,5 +16,9 @@
     <string name="user_detail">User Detail</string>
     <string name="user_info">User Infomation</string>
     <string name="arrow_right">arrow_right</string>
+    <string name="search">Search</string>
+    <string name="all">Tất cả</string>
+    <string name="picture">Hình ảnh</string>
+    <string name="google_langs_title">Google có các thứ tiếng:</string>
 
 </resources>

@@ -2,7 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/calculatorFragment">
+    app:startDestination="@+id/chromeFragment">
 
     <fragment
         android:id="@+id/FirstFragment"
@@ -34,4 +34,8 @@
         android:id="@+id/calculatorFragment"
         android:name="com.base.base_source.ui.weather.WeatherFragment"
         android:label="CalculatorFragment" />
+    <fragment
+        android:id="@+id/chromeFragment"
+        android:name="com.base.base_source.ui.chrome.ChromeFragment"
+        android:label="ChromeFragment" />
 </navigation>

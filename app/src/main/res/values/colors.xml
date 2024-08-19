@@ -15,4 +15,5 @@
     <color name="text_color_525252"> #525252</color>
     <color name="blue_primary">#43679a</color>
     <color name="nav">#F0F3F8</color>
+    <color name="chrome_search">#E5E5F2</color>
 </resources>

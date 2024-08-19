@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/Theme.Material3.Light">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <View
+            android:id="@+id/header_background"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_marginTop="10dp"
+            android:background="#faf8ff"
+            app:layout_constraintEnd_toBottomOf="parent" />
+        <ImageView
+            android:id="@+id/iv_home"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="8dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_home_on_background_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/edt_search"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edt_search" />
+
+        <EditText
+            android:id="@+id/edt_search"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/circle_url_background"
+            android:drawableStart="@drawable/page_info_24px"
+            android:drawablePadding="10dp"
+            android:hint="@string/search"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp"
+            android:textColor="?attr/colorOnSurface"
+            android:textColorHint="?attr/colorOnSurfaceVariant"
+            app:layout_constraintEnd_toStartOf="@+id/iv_add"
+            app:layout_constraintStart_toEndOf="@+id/iv_home"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_marginTop="10dp"
+            android:background="#e1e3e1"
+            app:layout_constraintTop_toBottomOf="@+id/edt_search" />
+
+        <ImageView
+            android:id="@+id/iv_add"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:src="@drawable/baseline_add_24"
+            app:layout_constraintBottom_toBottomOf="@+id/edt_search"
+            app:layout_constraintEnd_toStartOf="@+id/tv_view_tab_1"
+            app:layout_constraintTop_toTopOf="@+id/edt_search" />
+
+        <TextView
+            android:id="@+id/tv_view_tab_1"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/ic_square_on_background_24dp"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/edt_search"
+            app:layout_constraintEnd_toStartOf="@id/iv_setting"
+            app:layout_constraintTop_toTopOf="@+id/edt_search" />
+
+        <ImageView
+            android:id="@+id/iv_setting"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:layout_margin="6dp"
+            android:src="@drawable/baseline_more_vert_24"
+            app:layout_constraintBottom_toBottomOf="@+id/edt_search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edt_search" />
+
+        <!-- ====NavBar of Google page=== -->
+        <ImageView
+            android:id="@+id/g_menu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/baseline_menu_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/g_item_text_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/outline_bottom_background"
+            android:text="@string/all"
+            android:textAllCaps="true"
+            android:paddingTop="8dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"
+            android:textColor="#1967d2"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@+id/g_menu"
+            app:layout_constraintStart_toEndOf="@+id/g_menu"
+            app:layout_constraintTop_toTopOf="@+id/g_menu" />
+
+        <ImageView
+            android:id="@+id/g_apps"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:src="@drawable/apps_24px"
+            app:layout_constraintBottom_toBottomOf="@+id/iconButton"
+            app:layout_constraintEnd_toStartOf="@+id/iconButton"
+            app:layout_constraintTop_toTopOf="@+id/iconButton" />
+        <TextView
+            android:id="@+id/g_item_text_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/picture"
+            android:textAllCaps="true"
+            android:paddingTop="8dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginLeft="5dp"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@+id/g_menu"
+            app:layout_constraintStart_toEndOf="@+id/g_item_text_1"
+            app:layout_constraintTop_toTopOf="@+id/g_menu" />
+
+        <!-- ====NavBar of Google page=== -->
+
+        <Button
+            android:id="@+id/iconButton"
+            style="?attr/materialIconButtonFilledStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="Avatar"
+            android:layout_marginRight="15dp"
+            app:icon="@drawable/baseline_android_24"
+            app:layout_constraintBottom_toBottomOf="@+id/g_item_text_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/g_item_text_2" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/googlelogo_color_272x92dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/g_menu" />
+
+        <EditText
+            android:id="@+id/edt_search_2"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/circle_background"
+            android:drawableStart="@drawable/search_24px"
+            android:drawableEnd="@drawable/google_lens_icon"
+            android:drawablePadding="10dp"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="5dp"
+            android:textColor="?attr/colorOnSurface"
+            android:textColorHint="?attr/colorOnSurfaceVariant"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+        <ImageView
+            android:id="@+id/g_voice"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:src="@drawable/google_voice_icons"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintBottom_toBottomOf="@+id/edt_search_2"
+            app:layout_constraintEnd_toEndOf="@+id/edt_search_2"
+            app:layout_constraintTop_toTopOf="@+id/edt_search_2" />
+
+        <LinearLayout
+            android:id="@+id/languages_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@+id/edt_search_2">
+            <TextView
+                android:id="@+id/g_languages"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="6dp"
+                android:textSize="12dp"
+                android:text="@string/google_langs_title"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/g_lang_item_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="6dp"
+                android:text="English"
+                android:textSize="12dp"
+                android:textColor="#1967d2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/g_lang_item_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="6dp"
+                android:text="Français"
+                android:textSize="12dp"
+                android:textColor="#1967d2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/g_lang_item_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="6dp"
+                android:text="繁體中文"
+                android:textSize="12dp"
+                android:textColor="#1967d2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/trend_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="6dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="18dp"
+            android:text="Nội dung tìm kiếm thịnh hành"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/languages_layout" />
+
+        <ImageView
+            android:id="@+id/trend_setting"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="6dp"
+            android:src="@drawable/baseline_more_vert_24"
+            app:layout_constraintBottom_toBottomOf="@+id/trend_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/trend_text" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/trend_setting" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+<!--        -->
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+</LinearLayout>
