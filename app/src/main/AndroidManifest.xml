@@ -30,5 +30,8 @@
             android:exported="true"
             android:theme="@style/Theme.Basesrc"/>
     </application>
+    <queries>
+        <package android:name="com.example.playstore" />
+    </queries>
 
 </manifest>
