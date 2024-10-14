@@ -90,6 +90,9 @@ dependencies {
     implementation(libs.androidx.lifecycle.common.java8)
     implementation(libs.androidx.lifecycle.extensions)
 
+    //Mocks Interceptor
+    implementation(libs.mocks)
+
     // data store
     implementation(libs.androidx.datastore.preferences)
 }

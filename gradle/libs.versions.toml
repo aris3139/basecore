@@ -26,6 +26,7 @@ roomKtx = "2.5.0"
 rxandroid = "3.0.2"
 testng = "6.9.6"
 timber = "5.0.1"
+mocks = "1.6.0"
 
 [libraries]
     androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -59,7 +60,7 @@ timber = "5.0.1"
     rxandroid = { module = "io.reactivex.rxjava3:rxandroid", version.ref = "rxandroid" }
     testng = { module = "org.testng:testng", version.ref = "testng" }
     timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
-
+    mocks = { module = "com.github.gustafah:mock-interceptor", version.ref = "mocks" }
 [plugins]
     android-application = { id = "com.android.application", version.ref = "agp" }
     jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }

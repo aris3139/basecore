@@ -1,4 +1,4 @@
-package com.base.base_source.ui.syncdata
+package com.base.base_source.ui.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class SyncViewModel @Inject constructor(
+class HomeVM @Inject constructor(
     private val repository: EntityRepository
 ) : ViewModel() {
     private val _entities = MutableStateFlow<Resource<List<Entity>>>(Resource.Loading())
