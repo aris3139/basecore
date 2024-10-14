@@ -3,8 +3,8 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.kotlinAndroidKsp)
     alias(libs.plugins.hiltAndroid)
-    id("kotlin-parcelize")
-    id("androidx.navigation.safeargs")
+    alias(libs.plugins.kotlin.parcelize)
+    alias(libs.plugins.navigation.safeargs)
 }
 
 android {
@@ -92,6 +92,9 @@ dependencies {
 
     //Mocks Interceptor
     implementation(libs.mocks)
+
+    //Sdp Unit
+    implementation(libs.sdpUnit)
 
     // data store
     implementation(libs.androidx.datastore.preferences)
