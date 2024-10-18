@@ -60,7 +60,6 @@ fun ImageView.load(
 
 fun AppCompatActivity.setStatusBarColor(@ColorRes color: Int) {
     with(window) {
-        clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)
         addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
         WindowInsetsControllerCompat(window, decorView).isAppearanceLightStatusBars =
             this@setStatusBarColor.isDarkMode().not()

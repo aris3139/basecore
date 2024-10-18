@@ -3,14 +3,14 @@ package com.base.base_source.activities
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import androidx.annotation.DrawableRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
 import com.base.base_source.R
 import com.base.base_source.databinding.ActivityMainBinding
 import com.base.base_source.datastore.DataStoreManager
@@ -64,29 +64,28 @@ class MainActivity : AppCompatActivity() {
 
     private fun setNightMode(mode: Int) {
         allowReads {
-            uiStateJob = lifecycleScope.launchWhenStarted {
-                dataStoreManager.setThemeMode(mode)
+            uiStateJob = lifecycleScope.launch {
+                repeatOnLifecycle(Lifecycle.State.STARTED) {
+                    dataStoreManager.setThemeMode(mode)
+                }
             }
         }
         when (mode) {
             AppCompatDelegate.MODE_NIGHT_NO -> applyThemeMode(
-                AppCompatDelegate.MODE_NIGHT_YES,
-                R.drawable.ic_mode_night_default_black
+                AppCompatDelegate.MODE_NIGHT_YES
             )
 
             AppCompatDelegate.MODE_NIGHT_YES -> applyThemeMode(
-                Settings.MODE_NIGHT_DEFAULT,
-                R.drawable.ic_mode_night_no_black
+                Settings.MODE_NIGHT_DEFAULT
             )
 
             else -> applyThemeMode(
-                AppCompatDelegate.MODE_NIGHT_NO,
-                R.drawable.ic_mode_night_yes_black
+                AppCompatDelegate.MODE_NIGHT_NO
             )
         }
     }
 
-    private fun applyThemeMode(themeMode: Int, @DrawableRes icon: Int) {
+    private fun applyThemeMode(themeMode: Int) {
         setStatusBarColor(R.color.status_bar)
         if (AppCompatDelegate.getDefaultNightMode() != themeMode) {
             AppCompatDelegate.setDefaultNightMode(themeMode)
