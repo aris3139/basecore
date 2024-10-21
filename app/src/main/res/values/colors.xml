@@ -11,8 +11,10 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_300">#FF70abfb</color>
     <color name="teal_700">#FF018786</color>
-    <color name="text_sivler"> #757575</color>
-    <color name="text_color_525252"> #525252</color>
+    <color name="text_sivler">#757575</color>
+    <color name="text_color_525252">#525252</color>
     <color name="blue_primary">#43679a</color>
+    <color name="ins_button_blue">#3797EF</color>
+    <color name="divider">#F2F2F2</color>Z
     <color name="nav">#F0F3F8</color>
 </resources>
