@@ -2,10 +2,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.base.base_source.ui.home.HomeFragment"
         android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.base.base_source.ui.login.LoginFragment"
+        android:label="LoginFragment" />
 </navigation>
