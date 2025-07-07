@@ -6,6 +6,8 @@ import com.base.base_source.data.local.EntityDao
 import com.base.base_source.data.remote.APIService
 import com.base.base_source.data.remote.EntityRemoteDataSource
 import com.base.base_source.data.repository.EntityRepository
+import com.base.base_source.data.repository.UserRepositoryImpl
+import com.base.base_source.domain.repository.UserRepository
 import com.base.base_source.datastore.DataStoreManager
 import dagger.Module
 import dagger.Provides
@@ -42,4 +44,9 @@ object StorageModule {
     @Provides
     fun provideRepository(remoteDataSource: EntityRemoteDataSource, localDataSource: EntityDao) =
         EntityRepository(remoteDataSource, localDataSource)
+
+    @Singleton
+    @Provides
+    fun provideUserRepository(remoteDataSource: EntityRemoteDataSource, localDataSource: EntityDao): UserRepository =
+        UserRepositoryImpl(remoteDataSource, localDataSource)
 }

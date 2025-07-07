@@ -29,6 +29,13 @@ timber = "5.0.1"
 mocks = "1.6.0"
 sdpUnit = "1.1.1"
 
+# Compose BOM and related
+composeBom = "2023.10.01"
+composeActivity = "1.8.1"
+composeViewModel = "2.7.0"
+composeNavigation = "2.7.5"
+composeHilt = "1.1.0"
+
 [libraries]
     androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
     androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastorePreferences" }
@@ -63,6 +70,21 @@ sdpUnit = "1.1.1"
     timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
     mocks = { module = "com.github.gustafah:mock-interceptor", version.ref = "mocks" }
     sdpUnit = { module = "com.intuit.sdp:sdp-android", version.ref = "sdpUnit" }
+
+    # Compose BOM
+    compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+    compose-ui = { group = "androidx.compose.ui", name = "ui" }
+    compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+    compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+    compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+    compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+    compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+    compose-material = { group = "androidx.compose.material", name = "material" }
+    compose-activity = { group = "androidx.activity", name = "activity-compose", version.ref = "composeActivity" }
+    compose-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "composeViewModel" }
+    compose-navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "composeNavigation" }
+    compose-hilt = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "composeHilt" }
+
 [plugins]
     android-application = { id = "com.android.application", version.ref = "agp" }
     jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
