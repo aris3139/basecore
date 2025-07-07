@@ -1,5 +1,5 @@
 [versions]
-agp = "7.4.2"
+agp = "8.4.2"
 compiler = "4.14.2"
 datastorePreferences = "1.1.1"
 firebaseAuthKtx = "23.0.0"
