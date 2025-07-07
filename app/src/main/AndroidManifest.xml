@@ -33,6 +33,10 @@
             android:name=".presentation.compose.ComposeMainActivity"
             android:exported="true"
             android:theme="@style/Theme.Basesrc"/>
+        <activity
+            android:name=".presentation.compose.FullComposeActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Basesrc"/>
     </application>
 
 </manifest>

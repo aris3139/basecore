@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.base.base_source.activities.MainActivity
 import com.base.base_source.databinding.ActivitySplashBinding
-import com.base.base_source.presentation.compose.ComposeMainActivity
+import com.base.base_source.presentation.compose.FullComposeActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -29,13 +29,13 @@ class SplashActivity : AppCompatActivity() {
     }
     
     private fun setupChoiceButtons() {
-        // For now, let's navigate to Compose by default after delay
-        // In a real app, you might want to provide choice buttons
+        // For now, let's navigate to Full Compose by default after delay
+        // This showcases the complete Jetpack Compose + Clean Architecture integration
         lifecycleScope.launch {
             delay(1000)
-            // Navigate to Compose version by default to showcase the new architecture
-            val composeIntent = Intent(this@SplashActivity, ComposeMainActivity::class.java)
-            startActivity(composeIntent)
+            // Navigate to Full Compose version to showcase the complete new architecture
+            val fullComposeIntent = Intent(this@SplashActivity, FullComposeActivity::class.java)
+            startActivity(fullComposeIntent)
             finish()
         }
     }

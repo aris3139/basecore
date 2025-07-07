@@ -51,9 +51,26 @@ app/src/main/java/com/base/base_source/
 ```
 
 ### Demo:
-The app demonstrates both traditional ViewBinding approach and the new Jetpack Compose with Clean Architecture. The splash screen navigates to the Compose version by default, showcasing:
-- Clean Architecture with proper separation of concerns
-- Jetpack Compose UI with Material Design 3
-- Modern state management with Compose
-- Use cases for business logic
-- Repository pattern with domain models
+The app demonstrates both traditional ViewBinding approach and the new Jetpack Compose with Clean Architecture. 
+
+**Launch Flow:**
+1. Traditional splash screen (ViewBinding) 
+2. → Full Compose application with Clean Architecture
+
+**Features Showcased:**
+- **Clean Architecture** with proper separation of concerns across 3 layers
+- **Jetpack Compose UI** with Material Design 3 theming
+- **Modern state management** using Compose State and StateFlow
+- **Use cases** for business logic (GetUsersUseCase, GetUsersByGenderUseCase)
+- **Repository pattern** with domain models and data mappers
+- **Navigation Compose** for modern navigation
+- **Dependency Injection** with Hilt for all layers
+- **Reactive programming** with Kotlin Coroutines and Flow
+- **Unit testing** setup for domain layer
+
+**Architecture Benefits:**
+- 📱 **Testable**: Domain layer is independent and easily testable
+- 🔄 **Maintainable**: Clear separation of concerns and dependencies
+- 🚀 **Scalable**: Easy to add new features and modify existing ones
+- 🎨 **Modern UI**: Jetpack Compose with declarative UI paradigm
+- 🏗️ **Robust**: Clean Architecture principles ensure long-term maintainability
