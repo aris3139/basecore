@@ -70,4 +70,3 @@ sdpUnit = "1.1.1"
     hiltAndroid = { id = "com.google.dagger.hilt.android", version.ref = "hiltAndroid" }
     navigation-safeargs = { id = "androidx.navigation.safeargs", version.ref = "navigation" }
     kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin"}
-
