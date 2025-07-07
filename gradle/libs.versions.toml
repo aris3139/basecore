@@ -29,12 +29,18 @@ timber = "5.0.1"
 mocks = "1.6.0"
 sdpUnit = "1.1.1"
 
+# Testing
+mockitoKotlin = "4.1.0"
+coroutinesTest = "1.7.3"
+mockitoCore = "4.11.0"
+
 # Compose BOM and related
 composeBom = "2023.10.01"
 composeActivity = "1.8.1"
 composeViewModel = "2.7.0"
 composeNavigation = "2.7.5"
 composeHilt = "1.1.0"
+composeCompiler = "1.5.4"
 
 [libraries]
     androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -71,6 +77,11 @@ composeHilt = "1.1.0"
     mocks = { module = "com.github.gustafah:mock-interceptor", version.ref = "mocks" }
     sdpUnit = { module = "com.intuit.sdp:sdp-android", version.ref = "sdpUnit" }
 
+    # Testing libraries
+    mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockitoKotlin" }
+    kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutinesTest" }
+    mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockitoCore" }
+
     # Compose BOM
     compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
     compose-ui = { group = "androidx.compose.ui", name = "ui" }
@@ -84,7 +95,6 @@ composeHilt = "1.1.0"
     compose-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "composeViewModel" }
     compose-navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "composeNavigation" }
     compose-hilt = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "composeHilt" }
-
 [plugins]
     android-application = { id = "com.android.application", version.ref = "agp" }
     jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
@@ -92,4 +102,3 @@ composeHilt = "1.1.0"
     hiltAndroid = { id = "com.google.dagger.hilt.android", version.ref = "hiltAndroid" }
     navigation-safeargs = { id = "androidx.navigation.safeargs", version.ref = "navigation" }
     kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin"}
-
