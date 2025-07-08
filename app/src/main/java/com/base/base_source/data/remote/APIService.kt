@@ -1,18 +1,17 @@
 package com.base.base_source.data.remote
 
 
-import com.base.base_source.data.entities.Entity
+import com.base.base_source.data.entity.FeedEntity
 import retrofit2.Response
 import retrofit2.http.GET
-import retrofit2.http.Headers
 import retrofit2.http.Path
 
 interface APIService {
-    @Headers("Content-Type: application/json")
-    @GET("users.json?key=854d9b80")
-    suspend fun getEntities(): Response<List<Entity>>
+    @GET("api/feeds")
+    suspend fun getFeeds(): Response<List<FeedEntity>>
 
-    @Headers("Content-Type: application/json")
     @GET("beer/{id}")
-    suspend fun getEntity(@Path("id") id: Int): Response<Entity>
+    suspend fun getFeed(
+        @Path("id") id: Int
+    ): Response<FeedEntity>
 }
