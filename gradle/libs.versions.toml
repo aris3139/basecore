@@ -7,7 +7,7 @@
     versionName = "1.0"
 
 # Library versions
-    agp = "8.5.2"
+    agp = "8.11.0"
     compiler = "4.14.2"
     datastorePreferences = "1.0.0"
     firebaseAuthKtx = "22.3.1"
