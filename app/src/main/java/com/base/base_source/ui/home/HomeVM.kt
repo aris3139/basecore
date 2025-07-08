@@ -2,8 +2,8 @@ package com.base.base_source.ui.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.base.base_source.data.entities.Entity
-import com.base.base_source.data.repository.EntityRepository
+import com.base.base_source.domain.model.DomainEntity
+import com.base.base_source.domain.usecase.GetEntitiesUseCase
 import com.base.base_source.utils.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -13,10 +13,10 @@ import javax.inject.Inject
 
 @HiltViewModel
 class HomeVM @Inject constructor(
-    private val repository: EntityRepository
+    private val getEntitiesUseCase: GetEntitiesUseCase
 ) : ViewModel() {
-    private val _entities = MutableStateFlow<Resource<List<Entity>>>(Resource.Loading())
-    val entities: StateFlow<Resource<List<Entity>>> = _entities
+    private val _entities = MutableStateFlow<Resource<List<DomainEntity>>>(Resource.Loading())
+    val entities: StateFlow<Resource<List<DomainEntity>>> = _entities
 
     init {
         loadEntities()
@@ -24,8 +24,8 @@ class HomeVM @Inject constructor(
 
     private fun loadEntities() {
         viewModelScope.launch {
-            repository.getEntitiesAsFlow().collect { data ->
-                _entities.value = data as Resource<List<Entity>>
+            getEntitiesUseCase().collect { data ->
+                _entities.value = data
             }
         }
     }

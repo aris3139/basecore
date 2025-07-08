@@ -5,8 +5,10 @@ import com.base.base_source.data.local.AppDatabase
 import com.base.base_source.data.local.EntityDao
 import com.base.base_source.data.remote.APIService
 import com.base.base_source.data.remote.EntityRemoteDataSource
-import com.base.base_source.data.repository.EntityRepository
+import com.base.base_source.data.repository.EntityRepositoryImpl
+import com.base.base_source.domain.repository.EntityRepository
 import com.base.base_source.datastore.DataStoreManager
+import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,6 +16,17 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import javax.inject.Singleton
+
+@Module
+@InstallIn(SingletonComponent::class)
+abstract class RepositoryModule {
+    
+    @Binds
+    @Singleton
+    abstract fun bindEntityRepository(
+        entityRepositoryImpl: EntityRepositoryImpl
+    ): EntityRepository
+}
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -37,9 +50,4 @@ object StorageModule {
     @Provides
     fun provideAPIService(retrofit: Retrofit): APIService =
         retrofit.create(APIService::class.java)
-
-    @Singleton
-    @Provides
-    fun provideRepository(remoteDataSource: EntityRemoteDataSource, localDataSource: EntityDao) =
-        EntityRepository(remoteDataSource, localDataSource)
 }
