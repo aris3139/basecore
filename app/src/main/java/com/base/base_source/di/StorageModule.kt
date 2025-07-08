@@ -2,10 +2,10 @@ package com.base.base_source.di
 
 import android.content.Context
 import com.base.base_source.data.local.AppDatabase
-import com.base.base_source.data.local.EntityDao
+import com.base.base_source.data.local.FeedDao
 import com.base.base_source.data.remote.APIService
-import com.base.base_source.data.remote.EntityRemoteDataSource
-import com.base.base_source.data.repository.EntityRepository
+import com.base.base_source.data.remote.FeedRemoteDataSource
+import com.base.base_source.data.repository.FeedRepository
 import com.base.base_source.datastore.DataStoreManager
 import dagger.Module
 import dagger.Provides
@@ -40,6 +40,6 @@ object StorageModule {
 
     @Singleton
     @Provides
-    fun provideRepository(remoteDataSource: EntityRemoteDataSource, localDataSource: EntityDao) =
-        EntityRepository(remoteDataSource, localDataSource)
+    fun provideRepository(remoteDataSource: FeedRemoteDataSource, localDataSource: FeedDao) =
+        FeedRepository(remoteDataSource, localDataSource)
 }

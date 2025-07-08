@@ -4,14 +4,14 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.base.base_source.data.entities.Entity
+import com.base.base_source.data.entity.Feed
 import com.base.base_source.utils.ROOM_DB_NAME
 
 
-@Database(entities = [Entity::class], version = 4, exportSchema = false)
+@Database(entities = [Feed::class], version = 4, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
 
-    abstract fun entityDao(): EntityDao
+    abstract fun entityDao(): FeedDao
 
     companion object {
         @Volatile private var instance: AppDatabase? = null
