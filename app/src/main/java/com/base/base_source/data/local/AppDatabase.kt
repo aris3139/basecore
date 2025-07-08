@@ -4,14 +4,14 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.base.base_source.data.entity.Feed
+import com.base.base_source.data.entity.FeedEntity
 import com.base.base_source.utils.ROOM_DB_NAME
 
 
-@Database(entities = [Feed::class], version = 4, exportSchema = false)
+@Database(entities = [FeedEntity::class], version = 4, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
 
-    abstract fun entityDao(): FeedDao
+    abstract fun feedDao(): FeedDao
 
     companion object {
         @Volatile private var instance: AppDatabase? = null
@@ -20,7 +20,7 @@ abstract class AppDatabase : RoomDatabase() {
 
         private fun buildDatabase(appContext: Context) =
             Room.databaseBuilder(appContext, AppDatabase::class.java, ROOM_DB_NAME)
-                .fallbackToDestructiveMigration()
+                .fallbackToDestructiveMigration(false)
                 .build()
     }
 }

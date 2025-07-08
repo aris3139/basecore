@@ -8,7 +8,7 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 @Entity(tableName = "feeds")
-data class Feed(
+data class FeedEntity(
     @PrimaryKey(autoGenerate = false)
     val id: String,
     val description: String,

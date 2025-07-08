@@ -4,20 +4,20 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.base.base_source.data.entity.Feed
+import com.base.base_source.data.entity.FeedEntity
 import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface FeedDao {
     @Query("SELECT * FROM feeds")
-    fun getAllEntities(): Flow<List<Feed>>
+    fun getFeedsLocal(): Flow<List<FeedEntity>>
 
     @Query("SELECT * FROM feeds WHERE id = :id")
-    fun getEntity(id: Int): Flow<Feed>
+    fun getFeedLocalById(id: Int): Flow<FeedEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertAll(entities: List<Feed>)
+    suspend fun insertFeeds(entities: List<FeedEntity>)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(entity: Feed)
+    suspend fun insertFeed(entity: FeedEntity)
 }
