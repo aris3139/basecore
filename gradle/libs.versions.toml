@@ -35,12 +35,12 @@ coroutinesTest = "1.7.3"
 mockitoCore = "4.11.0"
 
 # Compose BOM and related
-composeBom = "2023.10.01"
+composeBom = "2024.09.03"
 composeActivity = "1.8.1"
 composeViewModel = "2.7.0"
 composeNavigation = "2.7.5"
 composeHilt = "1.1.0"
-composeCompiler = "1.5.4"
+composeCompiler = "1.5.14"
 
 [libraries]
     androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
