@@ -7,7 +7,7 @@ plugins {
     alias(libs.plugins.kotlin.parcelize)
     alias(libs.plugins.navigation.safeargs)
 }
-kotlin{
+kotlin {
     jvmToolchain(21)
 }
 
@@ -50,6 +50,7 @@ dependencies {
     implementation(libs.androidx.compose.material3)
     implementation(libs.tooling.preview)
     implementation(libs.material3.icon)
+    implementation(libs.hilt.navigation)
 
     // core
     implementation(libs.androidx.core.ktx)
