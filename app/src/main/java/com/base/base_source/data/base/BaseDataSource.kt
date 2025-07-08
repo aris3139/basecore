@@ -1,5 +1,6 @@
 package com.base.base_source.data.base
-import com.base.base_source.utils.Resource
+
+import com.base.base_source.data.Resource
 import retrofit2.Response
 import timber.log.Timber
 

@@ -1,4 +1,4 @@
-package com.base.base_source.utils
+package com.base.base_source.data
 
 sealed class Resource<T>(
     val data: T? = null,
