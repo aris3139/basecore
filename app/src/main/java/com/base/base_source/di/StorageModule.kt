@@ -2,10 +2,7 @@ package com.base.base_source.di
 
 import android.content.Context
 import com.base.base_source.data.local.AppDatabase
-import com.base.base_source.data.local.FeedDao
 import com.base.base_source.data.remote.APIService
-import com.base.base_source.data.remote.FeedRemoteDataSource
-import com.base.base_source.data.repository.FeedRepository
 import com.base.base_source.datastore.DataStoreManager
 import dagger.Module
 import dagger.Provides
@@ -26,7 +23,7 @@ object StorageModule {
 
     @Singleton
     @Provides
-    fun provideEmployeeDao(db: AppDatabase) = db.entityDao()
+    fun provideFeedDao(db: AppDatabase) = db.feedDao()
 
     @Singleton
     @Provides
@@ -37,9 +34,4 @@ object StorageModule {
     @Provides
     fun provideAPIService(retrofit: Retrofit): APIService =
         retrofit.create(APIService::class.java)
-
-    @Singleton
-    @Provides
-    fun provideRepository(remoteDataSource: FeedRemoteDataSource, localDataSource: FeedDao) =
-        FeedRepository(remoteDataSource, localDataSource)
 }
