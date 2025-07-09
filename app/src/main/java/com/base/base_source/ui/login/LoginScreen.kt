@@ -1,4 +1,4 @@
-package com.base.base_source.ui
+package com.base.base_source.ui.login
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

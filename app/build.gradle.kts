@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.hiltAndroid)
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.kotlin.parcelize)
+    alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.navigation.safeargs)
 }
 kotlin {
@@ -51,14 +52,13 @@ dependencies {
     implementation(libs.tooling.preview)
     implementation(libs.material3.icon)
     implementation(libs.hilt.navigation)
+    implementation(libs.navigation.compose)
 
     // core
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
+    implementation(libs.kotlin.serialization)
     implementation(libs.material)
-    implementation(libs.androidx.constraintlayout)
-    implementation(libs.androidx.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.rxandroid)
     implementation(libs.firebase.auth.ktx)
     testImplementation(libs.testng)
