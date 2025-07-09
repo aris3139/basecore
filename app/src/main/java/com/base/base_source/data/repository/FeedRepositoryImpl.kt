@@ -2,7 +2,7 @@ package com.base.base_source.data.repository
 
 import com.base.base_source.data.Resource
 import com.base.base_source.data.flow.FastAccessFlow
-import com.base.base_source.data.local.FeedDao
+import com.base.base_source.data.local.feed.FeedLocalDataSource
 import com.base.base_source.data.mapper.FeedMapper
 import com.base.base_source.data.remote.FeedRemoteRemoteDataSource
 import com.base.base_source.domain.model.Feed
@@ -13,19 +13,20 @@ import javax.inject.Inject
 
 class FeedRepositoryImpl @Inject constructor(
     private val remoteDataSource: FeedRemoteRemoteDataSource,
-    private val dao: FeedDao
+    private val feedLocalDataSource: FeedLocalDataSource
 ) : FeedRepository {
     override fun getFeeds(): Flow<Resource<List<Feed>>> =
         FastAccessFlow(
             localData = {
-                val entities = dao.getFeedsLocal().first()
+                val entities = feedLocalDataSource.getFeedsLocal().first()
                 if (entities.isEmpty()) Resource.Empty
                 else Resource.Success(entities)
             },
             dataFromServer = {
-                when (val result = remoteDataSource.getFeeds()) {
+                val result = remoteDataSource.getFeeds()
+                when (result) {
                     is Resource.Success -> {
-                        result.data?.let { dao.insertFeeds(it) }
+                        result.data.let { feedLocalDataSource.insertFeeds(it) }
                         Resource.Success(result.data)
                     }
 

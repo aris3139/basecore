@@ -5,6 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.base.base_source.data.entity.FeedEntity
+import com.base.base_source.data.local.feed.FeedDao
 import com.base.base_source.utils.ROOM_DB_NAME
 
 
