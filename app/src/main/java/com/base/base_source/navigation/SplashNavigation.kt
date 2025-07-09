@@ -14,7 +14,10 @@ fun NavGraphBuilder.splashNavigation(
         backStackEntry.toRoute<Splash>()
         SplashScreen(
             navigateToHome = {
-                navController.navigate(Home)
+                navController.navigate(Home) {
+                    popUpTo(Splash) { inclusive = true }
+                    launchSingleTop = true
+                }
             }
         )
     }
