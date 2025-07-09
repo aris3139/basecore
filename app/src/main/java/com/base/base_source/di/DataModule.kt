@@ -1,7 +1,7 @@
 package com.base.base_source.di
 
 import com.base.base_source.data.local.FeedDao
-import com.base.base_source.data.remote.FeedRemoteDataSource
+import com.base.base_source.data.remote.FeedRemoteRemoteDataSource
 import com.base.base_source.data.repository.FeedRepositoryImpl
 import dagger.Module
 import dagger.Provides
@@ -15,7 +15,7 @@ object DataModule {
     @Singleton
     @Provides
     fun provideRepositoryImpl(
-        remoteDataSource: FeedRemoteDataSource,
+        remoteDataSource: FeedRemoteRemoteDataSource,
         localDataSource: FeedDao
     ) =
         FeedRepositoryImpl(remoteDataSource, localDataSource)

@@ -4,7 +4,7 @@ import com.base.base_source.data.Resource
 import retrofit2.Response
 import timber.log.Timber
 
-abstract class BaseDataSource {
+abstract class BaseRemoteDataSource {
     protected suspend fun <T> getResult(call: suspend () -> Response<T>): Resource<T> {
         try {
             val response = call()
@@ -20,7 +20,7 @@ abstract class BaseDataSource {
 
     private fun <T> error(message: String): Resource<T> {
         Timber.d(message)
-        return Resource.Err("Network call has failed for a following reason: $message")
+        return Resource.Error("Network call has failed for a following reason: $message")
     }
 
 }
