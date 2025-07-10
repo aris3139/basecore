@@ -19,7 +19,8 @@ import com.base.base_source.R
 
 @Composable
 fun FeedFooter(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    description: String = "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris"
 ) {
     Column(
         modifier = modifier
@@ -80,7 +81,7 @@ fun FeedFooter(
         }
 
         Text(
-            text = "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ",
+            text = description,
             modifier = Modifier.padding(horizontal = 12.dp),
             style = androidx.compose.material3.MaterialTheme.typography.bodySmall
         )

@@ -11,8 +11,9 @@ import kotlinx.parcelize.Parcelize
 data class FeedEntity(
     @PrimaryKey(autoGenerate = false)
     val id: String,
+    @SerializedName("user_name")
+    val username: String,
+    val place: String,
     val description: String,
-    val avatar: String,
-    @SerializedName("createdAt")
-    val createdAt: String
+    val avatar: String?,
 ) : Parcelable

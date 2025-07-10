@@ -12,11 +12,14 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.base.base_source.extentions.CustomSpacer
 import com.base.base_source.navigation.FeedDetail
 import com.base.base_source.ui.home.component.Header
@@ -28,11 +31,17 @@ import com.base.base_source.ui.navigation.BottomNavigation
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(
+    homeViewModel: HomeViewModel = hiltViewModel(),
     onNavigateToFeedDetail: (FeedDetail) -> Unit,
     onNavigateToSettings: () -> Unit
 ) {
+    // region common
+    val uiState by homeViewModel.uiState.collectAsStateWithLifecycle()
 
+    // endregion
+    // region handle navigation
     val selectedTab = remember { mutableStateOf<BottomNavType>(BottomNavType.Home) }
+    //endregion
 
     Scaffold(
         topBar = {
@@ -77,7 +86,9 @@ fun HomeScreen(
                         color = Color.LightGray
                     )
                 }
-                listFeed()
+                listFeed(
+                    state = uiState.listFeed,
+                )
             }
         }
     )

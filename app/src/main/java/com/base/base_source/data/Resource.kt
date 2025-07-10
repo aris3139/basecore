@@ -13,7 +13,6 @@ sealed interface Resource<out T> {
     ) : Resource<Nothing>
 
     object Loading : Resource<Nothing>
-    object Empty : Resource<Nothing>
 
     val value: T?
         get() = when (this) {

@@ -23,7 +23,9 @@ import com.base.base_source.R
 
 @Composable
 fun HeaderFeedItem(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    username: String = "Aris",
+    place: String = "Tokyo, Japan"
 ) {
     Box(
         modifier = modifier
@@ -50,7 +52,7 @@ fun HeaderFeedItem(
             ) {
                 Row {
                     Text(
-                        text = "Aris",
+                        text = username,
                         style = MaterialTheme.typography.titleSmall,
                     )
                     Spacer(modifier = Modifier.width(4.dp))
@@ -64,7 +66,7 @@ fun HeaderFeedItem(
                 }
 
                 Text(
-                    text = "Tokyo , Japan",
+                    text = place,
                     style = MaterialTheme.typography.bodySmall
                 )
 
