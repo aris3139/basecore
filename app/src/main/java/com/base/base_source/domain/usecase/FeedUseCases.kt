@@ -1,10 +1,8 @@
 package com.base.base_source.domain.usecase
 
-import com.base.base_source.data.entity.FeedEntity
-import com.base.base_source.data.repository.FeedRepositoryImpl
+import com.base.base_source.data.Resource
 import com.base.base_source.domain.model.Feed
 import com.base.base_source.domain.repository.FeedRepository
-import com.base.base_source.utils.Resource
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

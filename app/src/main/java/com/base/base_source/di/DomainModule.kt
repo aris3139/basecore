@@ -2,20 +2,18 @@ package com.base.base_source.di
 
 import com.base.base_source.data.repository.FeedRepositoryImpl
 import com.base.base_source.domain.repository.FeedRepository
+import dagger.Binds
 import dagger.Module
-import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class DomainModule {
+abstract class DomainModule {
+    @Binds
     @Singleton
-    @Provides
-    fun bindFeedRepository(
+    abstract fun bindFeedRepository(
         feedRepositoryImpl: FeedRepositoryImpl
-    ): FeedRepository {
-        return feedRepositoryImpl
-    }
+    ): FeedRepository
 }

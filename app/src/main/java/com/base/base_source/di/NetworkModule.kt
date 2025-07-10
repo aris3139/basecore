@@ -1,10 +1,10 @@
 package com.base.base_source.di
 
-import com.google.gson.Gson
-import com.google.gson.GsonBuilder
 import com.base.base_source.utils.APPLICATION_JSON
 import com.base.base_source.utils.BASE_URL
 import com.base.base_source.utils.CONTENT_TYPE
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
