@@ -12,7 +12,9 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.base.base_source.extentions.CustomSpacer
 import com.base.base_source.navigation.FeedDetail
 import com.base.base_source.ui.home.component.Header
 import com.base.base_source.ui.home.component.story.ListStory
@@ -39,13 +41,21 @@ fun HomeScreen(
                     .fillMaxSize()
                     .padding(innerPadding)
             ) {
-
+                CustomSpacer(
+                    height = 1.dp,
+                    color = Color.LightGray
+                )
                 ListStory(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(horizontal = 8.dp, vertical = 4.dp)
+                        .padding(vertical = 8.dp)
+                )
+                CustomSpacer(
+                    height = 1.dp,
+                    color = Color.LightGray
                 )
             }
+
         }
     )
 }
