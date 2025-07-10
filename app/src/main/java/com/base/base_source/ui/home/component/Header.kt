@@ -36,7 +36,7 @@ fun Header(
                 painter = painterResource(id = R.drawable.ic_camera),
                 contentDescription = "Camera Icon",
                 modifier = Modifier
-                    .size(32.dp)
+                    .size(27.dp)
             )
         }
         Image(
@@ -55,7 +55,7 @@ fun Header(
                 Image(
                     painter = painterResource(id = R.drawable.ic_notification),
                     contentDescription = "Notification Icon",
-                    modifier = Modifier.size(32.dp)
+                    modifier = Modifier.size(27.dp)
                 )
             }
             Spacer(modifier = Modifier.width(2.dp))
@@ -65,7 +65,7 @@ fun Header(
                 Image(
                     painter = painterResource(id = R.drawable.ic_messanger),
                     contentDescription = "Messenger Icon",
-                    modifier = Modifier.size(32.dp)
+                    modifier = Modifier.size(27.dp)
                 )
             }
         }

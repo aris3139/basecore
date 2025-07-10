@@ -1,4 +1,4 @@
-package com.base.base_source.ui.feedDetail
+package com.base.base_source.ui.detail
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer

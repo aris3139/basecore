@@ -3,7 +3,7 @@ package com.base.base_source.navigation
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.toRoute
-import com.base.base_source.ui.feedDetail.FeedDetailScreen
+import com.base.base_source.ui.detail.FeedDetailScreen
 import com.base.base_source.ui.home.HomeScreen
 
 fun NavGraphBuilder.homeNavigation(
