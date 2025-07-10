@@ -9,7 +9,8 @@ object FeedMapper {
             id = feedEntity.id,
             description = feedEntity.description,
             avatar = feedEntity.avatar,
-            createdAt = feedEntity.createdAt
+            username = feedEntity.username,
+            place = feedEntity.place
         )
     }
 
@@ -18,7 +19,8 @@ object FeedMapper {
             id = feed.id,
             description = feed.description,
             avatar = feed.avatar,
-            createdAt = feed.createdAt
+            username = feed.username,
+            place = feed.place
         )
     }
 
