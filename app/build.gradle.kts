@@ -53,6 +53,7 @@ dependencies {
     implementation(libs.material3.icon)
     implementation(libs.hilt.navigation)
     implementation(libs.navigation.compose)
+    debugImplementation(libs.androidx.ui.tooling)
 
     // core
     implementation(libs.androidx.core.ktx)
